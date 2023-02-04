@@ -21,9 +21,9 @@ const NewHackathon = () => {
       }
 
       console.log(hackathon);
-      const result = await axios.post("/api/hack/newhackathon",hackathon)
+      const result = await axios.post("/api/hackathon/newhackathon",hackathon)
       .then((re)=>{alert("Hackathon Created Successfully")}).then(()=>{
-        window.location.href="/dashboard"
+        window.location.href="/dashboard/" + hackathon.title
       })
     
     }

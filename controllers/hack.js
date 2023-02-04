@@ -20,12 +20,22 @@ const NewHackathon = async(req,res) => {
 const GetHackathon = async(req,res)=>{
     try {
         const {admin} = req.body;
-        const res= await HackathonModel.find({admin:admin});
+        const response= await HackathonModel.find({admin:admin});
 
-        res.status(200).json({message:res});
+        res.status(200).json({message:response});
     } catch (error) {
         res.status(501).status({message:"API ERROR"});
     }
 }
 
-module.exports = {NewHackathon,GetHackathon};
+const GetAll = async(req,res) => {
+    try {
+        const response = await HackathonModel.find({});
+        console.log(res);
+        res.status(200).json({message:response});
+    } catch (error) {
+        res.status(501).json({message:"API ERROR"});
+    }
+}
+
+module.exports = {NewHackathon,GetHackathon,GetAll};

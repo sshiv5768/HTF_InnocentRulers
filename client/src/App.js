@@ -22,7 +22,7 @@ function App() {
           <Route path="/login" element={<LoginScreen isLogin={isLogin} setisLogin={setisLogin}/>} />
           <Route path="/home" element={<MainScreen/>} isLogin={isLogin}/>
           <Route path="/newhackathon" element={<NewHackathon/>} isLogin={isLogin}/>
-          <Route path="/dashboard" element={<DashBoard/>}/>
+          <Route path="/dashboard/:title" element={<DashBoard/>}/>
           <Route path="/hackathons" element={<Hackathons/>}/>
           <Route path="/organization/signup" element={<Organizations/>}/>
           <Route path="/organization/login" element={<OrganizationLogin/>}/>

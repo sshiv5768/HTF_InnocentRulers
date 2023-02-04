@@ -18,8 +18,8 @@ const OrganizationLogin = () => {
 
         await axios.post('/api/org/login',body)
         .then((res)=>{
-            console.log(res.data);
             const org = localStorage.setItem('org',email);
+            alert("Success");
         })
     }
 

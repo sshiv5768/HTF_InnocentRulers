@@ -8,7 +8,7 @@ const OrganizationNav = () => {
     <div className='flex flex-row justify-between pt-8'>
         <div className='flex'>
         <a href="/home" className='p-4'>Home</a>
-        {org && <a href="/hackathons" className='px-8 py-4'>List of Hackathons</a>}
+        {org && <a href="/allhackathons" className='px-8 py-4'>List of Hackathons</a>}
         </div>
         {
           org ? 
@@ -18,8 +18,8 @@ const OrganizationNav = () => {
           :
           <>
           <div>
-            <button className='bg-[#4461F2] px-6 py-3 rounded-3xl text-white' onClick={()=>{window.location.href="/login"}}>Sign In</button>
-            <button className=' px-3 py-2 rounded-2xl ml-8' onClick={()=>{window.location.href="/"}}>Register</button>
+            <button className='bg-[#4461F2] px-6 py-3 rounded-3xl text-white' onClick={()=>{window.location.href="/organization/login"}}>Sign In</button>
+            <button className=' px-3 py-2 rounded-2xl ml-8' onClick={()=>{window.location.href="/organization/signup"}}>Register</button>
         </div>
           </>
         }

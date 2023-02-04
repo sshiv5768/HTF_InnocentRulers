@@ -4,7 +4,7 @@ const app = express();
 
 const router = require("./routes/Auth");
 const userrouter = require("./routes/User");
-const hackrouter = require("./routes/Hackathon");
+const hrouter = require("./routes/Hackathon");
 const orgRouter = require("./routes/org");
 
 require("./db/db")
@@ -15,7 +15,7 @@ const port = 5000;
 
 app.use("/api",router);
 app.use("/api/user",userrouter);
-app.use("/api/hack",hackrouter);
+app.use("/api/hackathon",hrouter);
 app.use('/api/org',orgRouter);
 
 app.listen(port,()=>{

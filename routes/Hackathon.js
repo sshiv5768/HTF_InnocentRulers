@@ -1,8 +1,10 @@
-const hackrouter = require("express").Router();
-const {NewHackathon, GetHackathon} = require("../controllers/hack");
+const hrouter = require("express").Router();
+const {NewHackathon, GetHackathon, GetAll} = require("../controllers/hack");
 
-hackrouter.post('/newhackathon', NewHackathon);
+hrouter.post('/newhackathon', NewHackathon);
 
-hackrouter.post('/gethackathons',GetHackathon)
+hrouter.post('/getall',GetHackathon)
 
-module.exports = hackrouter;
+hrouter.get('/get',GetAll);
+
+module.exports = hrouter;
