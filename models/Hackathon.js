@@ -8,7 +8,7 @@ const HackathonSchema = mongoose.Schema({
     desc: {
         type:String
     },
-    Admin:{
+    admin:{
         type:String,
         required:true
     }

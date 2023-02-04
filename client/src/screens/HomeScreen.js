@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar'
 import Img from "../components/assets/main.svg"
 import axios from "axios";
 
-const HomeScreen = () => {
+const HomeScreen = ({isLogin, setisLogin}) => {
   const [name,setName] = useState("");
   const [email,setEmail] = useState("");
   const [phoneNumber,setPhone] = useState(0);
@@ -22,13 +22,13 @@ const HomeScreen = () => {
 
   return (
     <div className='overflow-hidden'>
-      <Navbar/>
+      <Navbar isLogin={isLogin} setisLogin={setisLogin}/>
       <div className=''>
         <div className=''>
-          <p className='m-auto ml-0 p-40 w-[50vw] height pb-4 text-5xl font-extrabold leading-normal'>We help you organize Hackathons :)</p>
+          <p className='m-auto ml-0 px-40 py-16 w-[50vw] pb-4 text-5xl font-extrabold leading-normal'>We help you organize Hackathons :)</p>
         </div>
         <div className='flex flex-row'>
-        <p className='ml-40 text-xl'>If you already have an account you can <a href="/login" className='text-[#4461f2]'>Log in here</a></p>
+        <p className='ml-40 text-xl mt-8'>If you already have an account you can <a href="/login" className='text-[#4461f2]'>Log in here</a></p>
         <img src={Img} className="w-[40vw] mt-[1vh] "/>
         <div className='flex flex-col gap-6'>
           <input type="name" className='p-4 w-[15vw] bg-[#EAF0F7] focus:outline-none' placeholder="Name" 

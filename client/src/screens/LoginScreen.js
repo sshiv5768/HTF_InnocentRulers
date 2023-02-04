@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import Img from "../components/assets/main1.svg"
 import axios from 'axios';
 
-const LoginScreen = () => {
+const LoginScreen = ({isLogin, setisLogin}) => {
 const [otp,setOtp] = useState(0);
   const [phone,setPhone] = useState(0);
 
@@ -20,17 +20,20 @@ const [otp,setOtp] = useState(0);
         smsCode: otp
     }
     const res = await axios.post("/api/verify-code",body)
-    .then((j)=>{window.location="/home"});
+    .then((j)=>{
+      const user = localStorage.setItem('user',phone);
+      setisLogin(true);
+      window.location="/home"});
   }
   return (
     <div className='overflow-hidden'>
       <Navbar/>
       <div className=''>
         <div className=''>
-          <p className='m-auto ml-0 p-40 w-[50vw] height pb-4 text-5xl font-extrabold leading-normal'>We help you organize Hackathons :)</p>
+          <p className='m-auto ml-0 px-40 py-16 w-[50vw] height pb-4 text-5xl font-extrabold leading-normal'>We help you organize Hackathons :)</p>
         </div>
         <div className='flex flex-row'>
-        <p className='ml-40 text-xl'>If you don't have an account you can <a href="/" className='text-[#4461f2]'>Register here</a></p>
+        <p className='ml-40 mt-8 text-xl'>If you don't have an account you can <a href="/" className='text-[#4461f2]'>Register here</a></p>
         <img src={Img} className="w-[40vw] mt-[1vh] "/>
         <div className='flex flex-col gap-6'>
           <input type="text" className='p-4 w-[15vw] bg-[#EAF0F7] focus:outline-none' placeholder="Enter Phone Number"

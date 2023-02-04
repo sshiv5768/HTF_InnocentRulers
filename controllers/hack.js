@@ -7,6 +7,8 @@ const NewHackathon = async(req,res) => {
             title,desc,admin
         });
 
+        console.log(newhack);
+
         await newhack.save();
         res.status(200).json({message:"New Hackathon created"});
     } catch (error) {
