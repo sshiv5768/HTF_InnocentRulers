@@ -1,5 +1,5 @@
 # HTF_InnocentRulers
-## 🌟 OrgHack: A platform which makes it easy to put on a successful event.
+## 🌟 HackHackathon: A platform which makes it easy to put on a successful event.
 ![WhatsApp Image 2023-02-04 at 12 23 33 PM (1)](https://user-images.githubusercontent.com/40575397/216754284-be4beb19-a4ea-42a3-b076-6822d6a13e34.jpeg)
 OrgHack is an online platform designed to help hackathon organizers run their events successfully. It provides a range of features to help with event management, including swag logistics, hackathon task management, and more. With OrgHack, you can be sure that your event will run smoothly and efficiently, making it a great choice for any hackathon organizer.
 
