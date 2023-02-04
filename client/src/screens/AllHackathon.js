@@ -6,16 +6,13 @@ const AllHackathon = () => {
 
     const [data,setdata] = useState([]);
 
-    const GetAll = async () => {
-        const res = await axios.get('/api/hackathon/get');
-        // console.log(res.data.message);
-        setdata(res.data.message);
-        console.log(data)
-    }
 
     useEffect(()=>{
-        GetAll();
-
+      const res = axios.get('/api/hackathon/get')
+      .then((re)=>{
+      setdata(re.data.message);
+      console.log(data);
+      })
     },[data])
 
   return (
@@ -23,13 +20,21 @@ const AllHackathon = () => {
       <OrganizationNav/>
       <div>
         <p className='text-center mt-16 font-bold text-4xl'>Hackathons Available</p>
-        <div className='flex mt-16 px-36  justify-center gap-10 flex-wrap'>
+        <div className='flex flex-wrap w-[80vw] mx-auto gap-8 mt-8'>
         {
-          data.map((e)=>{
-             <div className='h-[20vh] w-[30vw] border-2 border-black'>
-              <p>{e.title}</p>
-              <p>{e.desc}</p>
-             </div>
+          data.length > 0 && data.map((e)=>{
+            return (
+              <>
+              <div className='p-16 w-[20vw] mx-auto shadow-lg border-2'>
+                <p className='text-xl font-semibold text-center'>{e.title}</p>
+                <div className='mt-4'>
+                <p className='text-lg'>{e.desc}</p>
+                <p className='text-lg'>POC: {e.admin}</p>
+                </div>
+                <button className='py-3 px-6 border-2 rounded-lg mx-12 mt-8'>Coming Soon</button>
+                </div>
+              </>
+            )
           })
         }
         </div>

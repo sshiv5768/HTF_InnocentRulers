@@ -17,8 +17,11 @@ const Core = () => {
     } 
     axios.post('/api/core/register',member).then((e)=>{
       re.push(member);
+      setName("");
+    setDomain("");
+    setphone("");
       alert("Member added");
-
+      
     }).then(()=>{
       setName("");
     setDomain("");
@@ -36,7 +39,7 @@ const Core = () => {
   }
 
   useEffect(()=>{
-      GetMember();
+    GetMember();
   },[])
 
   

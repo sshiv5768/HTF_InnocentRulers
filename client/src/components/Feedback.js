@@ -20,6 +20,7 @@ const Feedback = ({title}) => {
     <div className=''>
       <img src={data} className="mt-8 mx-64 w-[25vw] h-[40vh]"/>
     </div>
+    <button className=''>Download csv</button>
     </div>
   )
 }

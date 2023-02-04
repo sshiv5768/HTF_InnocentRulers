@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Navbar from '../components/Navbar'
 import Img from "../components/assets/main.svg"
 import axios from "axios";
+import {Swal} from "sweetalert2";
 
 const HomeScreen = ({isLogin, setisLogin}) => {
   const [name,setName] = useState("");
@@ -16,7 +17,7 @@ const HomeScreen = ({isLogin, setisLogin}) => {
     const result = await axios.post("/api/register",body)
     .then((res)=>{
       console.log(res.data);
-      alert(res.data.message);
+      window.location.href="/login"
     })
   }
 

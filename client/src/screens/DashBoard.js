@@ -146,6 +146,9 @@ const DashBoard = () => {
         {feedback && <Feedback tite={title}/>}
         {log && <Log/>}
         {venue && <Food/>}
+        {
+          !core && !use && !community && !sponsor && !list && !feedback && !log && !venue && <p className='font-extrabold text-2xl mx-[30vw] mt-[20vh]'>Welcome to the HackHackathon</p>
+        }
         </div>
       </div>
     </div>

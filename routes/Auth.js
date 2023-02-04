@@ -35,13 +35,13 @@ router.post('/send-code', async (req, res) => {
     const randomNumber = Math.random().toString().substr(2, 6).repeat(6).substr(2, 6);;
   
     const message = `Hello ! Your verification code is: ${randomNumber}`;
-    const phoneNumber = recipientPhoneNumber;
+    const phoneNumber = "+91"+recipientPhoneNumber;
     
-    await redisClient.set(recipientPhoneNumber, `${randomNumber}`, 'EX', 600);
+    await redisClient.set("+91"+recipientPhoneNumber, `${randomNumber}`, 'EX', 600);
   
     const response = await twilioClient.messages.create({
       from: '+12058500889',
-      to: recipientPhoneNumber,
+      to: "+91"+recipientPhoneNumber,
       body: message,
     });
   
@@ -53,10 +53,10 @@ router.post('/verify-code', async (req, res) => {
     const recipientPhoneNumber = req.body.phoneNumber;
     const smsCodeReceived = req.body.smsCode;
   
-    const value = await redisClient.get(recipientPhoneNumber);
+    const value = await redisClient.get("+91"+recipientPhoneNumber);
   
     if (value === `${smsCodeReceived}`) {
-      await redisClient.del(recipientPhoneNumber);
+      await redisClient.del("+91"+recipientPhoneNumber);
   
       return res.json({ message: 'This is a valid match!' });
     }

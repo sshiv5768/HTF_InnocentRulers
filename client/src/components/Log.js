@@ -16,7 +16,7 @@ const Log = () => {
     <button className='bg-[#4461F2] px-6 py-3 mt-8 mx-4 rounded-3xl text-white' onClick={()=>{alert("Entry Added")}}>Confirm</button>
 </div>
 <div className='p-4'>
-<table className='flex text-left mx-auto w-[50vw] border-2'>
+<table className='flex text-left mx-auto w-[30vw] border-2'>
 <tr>
 <th className='mx-32 w-[20vw]'>Name</th>
 <th className='w-[15vw]'>Company</th>
