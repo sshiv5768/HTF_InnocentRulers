@@ -3,7 +3,7 @@ const Redis = require("ioredis");
 const AdminModel = require("../models/Admin");
 
 const accountSid = "AC23560dcb904b95b9234c975102dd8c3b";
-const authToken = "3bc42e62fd9b35cf2c876438c9bda05c";
+const authToken = "99772d9ee2e8c6e21182a2eb7b37caca";
 
 const twilioClient = require('twilio')(accountSid, authToken);
 
