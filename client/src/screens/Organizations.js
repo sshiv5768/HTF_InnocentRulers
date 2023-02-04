@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import OrganizationNav from '../components/OrganizationNav'
+import Img from "../components/assets/org.jpeg";
 
 const Organizations = () => {
     const [email,setemail] = useState("");
@@ -29,7 +30,9 @@ const Organizations = () => {
     <div>
       <OrganizationNav/>
       <div className='flex'>
-        <div className='w-[40vw] h-[90vh] bg-[#b89b9b]'></div>
+        <div className='w-[40vw] h-[90vh] '>
+          <img src={Img} className="mt-32 mx-32"/>
+        </div>
         <div className='m-auto'>
         <div className='flex flex-col gap-6'>
         <input type="text" className='p-4 w-[25vw] bg-[#EAF0F7] focus:outline-none' placeholder="Enter Organization Name"

@@ -12,6 +12,9 @@ const OrganizationSchema = mongoose.Schema({
     password:{
         type:String,
         required:true
+    },
+    isSponsor: {
+        default:false
     }
 });
 

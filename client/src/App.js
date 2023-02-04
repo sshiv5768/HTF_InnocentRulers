@@ -9,6 +9,8 @@ import DashBoard from './screens/DashBoard';
 import Hackathons from './screens/Hackathons';
 import Organizations from './screens/Organizations';
 import OrganizationLogin from './screens/OrganizationLogin';
+import AllHackathon from './screens/AllHackathon';
+import UserRegistration from './screens/UserRegistration';
 
 function App() {
   const [isLogin,setisLogin] = useState();
@@ -26,6 +28,8 @@ function App() {
           <Route path="/hackathons" element={<Hackathons/>}/>
           <Route path="/organization/signup" element={<Organizations/>}/>
           <Route path="/organization/login" element={<OrganizationLogin/>}/>
+          <Route path="/allhackathons" element={<AllHackathon/>}></Route>
+          <Route path="/user/registration/:title" element={<UserRegistration/>}/>
         </Routes>
 
       </BrowserRouter>

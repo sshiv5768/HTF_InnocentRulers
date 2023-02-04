@@ -11,7 +11,8 @@ const HackathonSchema = mongoose.Schema({
     admin:{
         type:String,
         required:true
-    }
+    },
+
 });
 
 const HackathonModel = mongoose.model('hackathon',HackathonSchema);

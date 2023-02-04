@@ -10,17 +10,25 @@ const UserSchema = mongoose.Schema({
         required:true
     },
     phone: {
-        type:Number,
+        type:String,
         required:true
     },
     gender: {
         type:String,
         required:true
     },
-    tsize: {
-        type:Number,
+    domain: {
+        type:String,
         required:true
-    },    
+    },   
+    team: {
+        type:String,
+        required:true
+    },
+    title:{
+        type:String,
+        required:true
+    }
 });
 
 const UserModel = mongoose.model('user',UserSchema);

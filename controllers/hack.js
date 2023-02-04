@@ -7,7 +7,7 @@ const NewHackathon = async(req,res) => {
             title,desc,admin
         });
 
-        console.log(newhack);
+        //console.log(newhack);
 
         await newhack.save();
         res.status(200).json({message:"New Hackathon created"});
@@ -30,9 +30,9 @@ const GetHackathon = async(req,res)=>{
 
 const GetAll = async(req,res) => {
     try {
-        const response = await HackathonModel.find({});
+        const response1 = await HackathonModel.find({});
         console.log(res);
-        res.status(200).json({message:response});
+        res.status(200).json({message:response1});
     } catch (error) {
         res.status(501).json({message:"API ERROR"});
     }
