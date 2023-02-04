@@ -39,7 +39,7 @@ const [otp,setOtp] = useState(0);
           <input type="text" className='p-4 w-[15vw] bg-[#EAF0F7] focus:outline-none' placeholder="Enter Phone Number"
             onChange={(e)=>{setPhone(e.target.value)}}
           ></input>
-          <a className='ml-[11vw] text-sm hover:underline cursor' onClick={()=>{sendotp()}}>Send OTP</a>
+          <a className='ml-[11vw] text-sm hover:underline cursor-pointer' onClick={()=>{sendotp()}}>Send OTP</a>
           <input type="number" className='p-4 w-[15vw] bg-[#EAF0F7] focus:outline-none' placeholder="Enter OTP"
           onChange={(e)=>{setOtp(e.target.value)}}
         ></input>

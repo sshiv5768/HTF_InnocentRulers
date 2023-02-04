@@ -16,4 +16,16 @@ const NewHackathon = async(req,res) => {
     }
 }
 
-module.exports = {NewHackathon};
+
+const GetHackathon = async(req,res)=>{
+    try {
+        const {admin} = req.body;
+        const res= await HackathonModel.find({admin:admin});
+
+        res.status(200).json({message:res});
+    } catch (error) {
+        res.status(501).status({message:"API ERROR"});
+    }
+}
+
+module.exports = {NewHackathon,GetHackathon};

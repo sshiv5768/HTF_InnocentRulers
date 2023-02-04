@@ -4,12 +4,12 @@ const Navbar = ({isLogin,setisLogin}) => {
   const user = localStorage.getItem('user');
   return (
     
-    <div className='h-[10vh] w-[100vw] bg-[#EBEBEB] px-16'>
+    <div className='h-[11vh] w-[100vw] bg-[#EBEBEB] px-16'>
         <div className='flex flex-row justify-between pt-8'>
             <div className='flex'>
-            <p className='p-4'>Home</p>
-            <p className='p-4'>About </p>
-            <p className='p-4'>Contact</p>
+            <a href="/home" className='p-4'>Home</a>
+            <a href="/" className='p-4'>About </a>
+            <a href="" className='p-4'>Contact</a>
             </div>
             {
               user ? 
@@ -20,7 +20,7 @@ const Navbar = ({isLogin,setisLogin}) => {
               <>
               <div>
                 <button className='bg-[#4461F2] px-6 py-3 rounded-3xl text-white' onClick={()=>{window.location.href="/login"}}>Sign In</button>
-                <button className=' px-3 py-2 rounded-md ml-8' onClick={()=>{window.location.href="/"}}>Register</button>
+                <button className=' px-3 py-1 rounded-2xl ml-8' onClick={()=>{window.location.href="/"}}>Register</button>
             </div>
               </>
             }

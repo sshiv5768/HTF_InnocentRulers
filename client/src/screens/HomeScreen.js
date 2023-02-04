@@ -28,7 +28,7 @@ const HomeScreen = ({isLogin, setisLogin}) => {
           <p className='m-auto ml-0 px-40 py-16 w-[50vw] pb-4 text-5xl font-extrabold leading-normal'>We help you organize Hackathons :)</p>
         </div>
         <div className='flex flex-row'>
-        <p className='ml-40 text-xl mt-8'>If you already have an account you can <a href="/login" className='text-[#4461f2]'>Log in here</a></p>
+        <p className='ml-40 text-xl mt-8'>If you already have an account you can <a href="/login" className='text-[#4461f2]'>Login</a></p>
         <img src={Img} className="w-[40vw] mt-[1vh] "/>
         <div className='flex flex-col gap-6'>
           <input type="name" className='p-4 w-[15vw] bg-[#EAF0F7] focus:outline-none' placeholder="Name" 
@@ -41,6 +41,7 @@ const HomeScreen = ({isLogin, setisLogin}) => {
             onChange={(e)=>{setPhone(e.target.value)}}
           ></input>
           <button className='px-6 py-3 bg-[#4461F2] text-white hover:bg-[#142579]' onClick={()=>{signin()}}>Sign In</button>
+          <p>Are you an organization ? <a href="/organization/signup" className='text-blue-500'>Click here</a></p>
         </div>
         
         </div>
