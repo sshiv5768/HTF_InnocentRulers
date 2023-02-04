@@ -9,14 +9,12 @@ const Core = () => {
 
   const [data,setData] = useState();
 
-  var re = [];
 
   const RegisterMember = async()=>{
     const member = {
       name,domain,phone
     } 
     axios.post('/api/core/register',member).then((e)=>{
-      re.push(member);
       setName("");
     setDomain("");
     setphone("");
@@ -64,15 +62,6 @@ const Core = () => {
        <th className='w-[15vw]'>Domain</th>
        <th className='w-[15vw]'>Phone</th>
        </tr>
-        {
-          re.push((e)=>{
-            <tr>
-        <td className='mx-32 w-[20vw]'>{e.name}</td>
-       <td className='w-[15vw]'>{e.domain}</td>
-       <td className='w-[15vw]'>{e.phone}</td>
-       </tr>
-          })
-        }
         </table>
        </div>
     </div>

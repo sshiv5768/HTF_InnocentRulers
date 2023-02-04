@@ -5,6 +5,12 @@ const Log = () => {
   const [name,setName] = useState("");
   const [domain,setDomain] = useState("");
   const [quan,setQuan] = useState();
+  var res=[];
+
+  const Enter = () =>{
+    alert("Entered");
+  }
+
   return (
     <div className='' >
     <p className='text-xl mx-32  font-semibold'>Logistics and Swags</p>
@@ -13,7 +19,7 @@ const Log = () => {
     <input className="p-4 w-[25vw] mt-[5vh] bg-[#EAF0F7] focus:outline-none" type="text" placeholder="Name" onChange={(e)=>{setName(e.target.value)}}/>
     <input className="p-4 w-[25vw] mt-[5vh] bg-[#EAF0F7] focus:outline-none" type="text" placeholder="Company" onChange={(e)=>{setDomain(e.target.value)}}/>
     <input className="p-4 w-[25vw] mt-[5vh] bg-[#EAF0F7] focus:outline-none" type="Number" placeholder="Quantity" onChange={(e)=>{setQuan(e.target.value)}}/>
-    <button className='bg-[#4461F2] px-6 py-3 mt-8 mx-4 rounded-3xl text-white' onClick={()=>{alert("Entry Added")}}>Confirm</button>
+    <button className='bg-[#4461F2] px-6 py-3 mt-8 mx-4 rounded-3xl text-white' onClick={()=>{Enter()}}>Confirm</button>
 </div>
 <div className='p-4'>
 <table className='flex text-left mx-auto w-[30vw] border-2'>
