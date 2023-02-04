@@ -17,6 +17,11 @@ OrgHack is an online platform designed to help hackathon organizers run their ev
 - Build (Frontend/Backend) 
 - Deploy
 
+## 🏃‍♂️🚶🏽🧍‍♂️ How it works ?
+
+![WhatsApp Image 2023-02-05 at 2 33 46 AM](https://user-images.githubusercontent.com/72187440/216789741-b107fcfe-648a-4190-a1fe-825b390bb021.jpeg)
+
+
 ## 🪛 Installation
 In the project directory, you can run:
 
