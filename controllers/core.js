@@ -2,8 +2,8 @@ const CoreModel = require("../models/Core");
 
 const RegisterCore = async(req,res) => {
     try {
-        const {name,domain,phone} = req.body;
-        const newmember = new CoreModel({name,domain,phone});
+        const {name,domain,phone,title} = req.body;
+        const newmember = new CoreModel({name,domain,phone,title});
 
         await newmember.save();
         res.status(200).json({message:"Added"});

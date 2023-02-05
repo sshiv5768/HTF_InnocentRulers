@@ -12,7 +12,7 @@ const MainScreen = () => {
       <Navbar/>
     <div className='mt-[15vh]'>
         <div className=' text-center'>
-            <p className='text-3xl font-extrabold mx-auto'>What brings you to DevComs Today?</p>
+            <p className='text-3xl font-extrabold mx-auto'>What brings you to HackHackathons Today?</p>
             <p className='text-center mt-[2vh] text-[#475569] font-bold'>We will try to provide you with the best experience.</p>
         </div>
         <a className='hover:cursor-pointer  scale-110 ' href="/newhackathon">

@@ -27,7 +27,7 @@ const CreateQR = async(req,res)=>{
                 "apy-token":"APT0XzXnR7Ue1l8Zc17qkTqROXLNoKmRbkLdP0P4ENICW3Dov"
             },
             body: JSON.stringify({
-                "content":"http://localhost:5000/create/"
+                "content":"http://localhost:3000/user/registration/XYZ"
             })
         }).then((e)=>{
             return e.json();

@@ -12,8 +12,10 @@ import OrganizationLogin from './screens/OrganizationLogin';
 import AllHackathon from './screens/AllHackathon';
 import UserRegistration from './screens/UserRegistration';
 
+
 function App() {
   const [isLogin,setisLogin] = useState();
+
   useEffect(()=>{
 
   },[isLogin])

@@ -1,18 +1,20 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-const Core = () => {
+const Core = ({title}) => {
 
   const [name,setName]= useState("");
   const [domain,setDomain] = useState("");
   const [phone,setphone] = useState("");
 
-  const [data,setData] = useState();
+  const [data,setData] = useState([]);
+  const [active,setactive] = useState(false);
 
 
   const RegisterMember = async()=>{
+    console.log(title);
     const member = {
-      name,domain,phone
+      name,domain,phone,title
     } 
     axios.post('/api/core/register',member).then((e)=>{
       setName("");
@@ -29,15 +31,21 @@ const Core = () => {
     
   }
 
-  const GetMember = async()=>{
-    await axios.get('/api/core/all').then((res)=>{
-        setData(res.data.member)
+  const GetMember = ()=>{
+     axios.get('/api/core/all').then((res)=>{
+
+        res.data.message.map((e)=>{
+          if(e.title === title){
+
+            setData(res.data.message)
+          }
+        })
         console.log(data);
     })
+    setactive(true);
   }
 
   useEffect(()=>{
-    GetMember();
   },[])
 
   
@@ -52,17 +60,30 @@ const Core = () => {
         <input className="p-4 w-[25vw] mt-[5vh] bg-[#EAF0F7] focus:outline-none" type="text" placeholder="Phone Number (+91)" onChange={(e)=>{setphone(e.target.value)}}/>
         
     </div>
-    <button className=' mx-[15vw] mt-[5vh] px-6 py-3 bg-[#4461F2] text-white hover:bg-[#142579]' onClick={()=>{RegisterMember();}}>Register</button>   
+    <button className=' mx-[15vw] mt-[5vh] px-6 py-3 bg-[#4461F2] text-white hover:bg-[#142579] cursor-pointer' onClick={()=>{RegisterMember()}}>Register</button>   
        </div>
        <div className='w-[50vw] p-16'>
-       <p className='text-xl text-center mx-16 font-semibold'>Core Team List</p>
-       <table className='flex text-left mx-auto w-[40vw] border-2'>
+       <button className='text-xl text-center mx-16 font-semibold' onClick={()=>{GetMember()}}>Get Core Team List</button>
+       <table className='flex text-left mx-auto w-[43vw] border-2'>
        <tr>
        <th className='mx-32 w-[20vw]'>Name</th>
        <th className='w-[15vw]'>Domain</th>
        <th className='w-[15vw]'>Phone</th>
        </tr>
-        </table>
+       </table>
+       {
+        active && data.map((e)=>{
+          return (
+            <div className='flex text-left border-2'>
+          <p className=' w-[20vw]'>{e.name}</p>
+          <p className=' w-[20vw]'>{e.domain}</p>
+          <p className=' w-[20vw]'>{e.phone}</p>
+          </div>
+          )
+        })
+      }
+        
+        
        </div>
     </div>
   )

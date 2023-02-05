@@ -42,7 +42,7 @@ const DashBoard = () => {
       <div className='flex'>
         <div className='w-[20vw] h-[100vh] bg-[#EBEBEB]'>
           <div className='p-8 mt-8'>
-            <div className='text-center border-black hover:bg-white p-8 font-semibold text-lg '>
+            <div className='text-left border-black hover:bg-white p-8 font-semibold text-lg '>
               <a className="cursor-pointer hover:underline" onClick={
                 ()=>{
                   console.log(core);
@@ -60,7 +60,7 @@ const DashBoard = () => {
               
             </div>
             
-            <div className='text-center p-8  hover:bg-white font-semibold text-lg '>
+            <div className='text-left p-8  hover:bg-white font-semibold text-lg '>
             <a className="cursor-pointer hover:underline" onClick={()=>{
               setcore(false);
               setuse(false);
@@ -73,7 +73,7 @@ const DashBoard = () => {
             }}>
             List of Attendes</a>
             </div>
-            <div className='text-center p-8 hover:bg-white font-semibold text-lg '>
+            <div className='text-left p-8 hover:bg-white font-semibold text-lg '>
               <a className="cursor-pointer hover:underline" onClick={()=>{
                 setcore(false);
                 setuse(false);
@@ -85,7 +85,7 @@ const DashBoard = () => {
                 setfeedback(false);
               }}>Featured Sponsors</a>
             </div>
-            <div className='text-center p-8 hover:bg-white font-semibold text-lg '>
+            <div className='text-left p-8 hover:bg-white font-semibold text-lg '>
               <a className="cursor-pointer hover:underline" onClick={()=>{
                 setcore(false);
                 setuse(false);
@@ -97,7 +97,7 @@ const DashBoard = () => {
                 setfeedback(false);
               }}>Community Collaborations</a>
             </div>
-            <div className='text-center p-8 hover:bg-white font-semibold text-lg '>
+            <div className='text-left p-8 hover:bg-white font-semibold text-lg '>
               <a className="cursor-pointer hover:underline" onClick={()=>{
                 setcore(false);
                 setuse(false);
@@ -109,7 +109,7 @@ const DashBoard = () => {
                 setvenue(false);
               }}>Logistics/Swags</a>
             </div>
-            <div className='text-center p-8 hover:bg-white font-semibold text-lg '>
+            <div className='text-left p-8 hover:bg-white font-semibold text-lg '>
               <a className="cursor-pointer hover:underline" onClick={()=>{
                 setcore(false);
                 setuse(false);
@@ -121,7 +121,7 @@ const DashBoard = () => {
                 setvenue(true);
               }}>Food And Venue</a>
             </div>
-            <div className='text-center p-8 hover:bg-white font-semibold text-lg '>
+            <div className='text-left p-8 hover:bg-white font-semibold text-lg '>
               <a className="cursor-pointer hover:underline" onClick={()=>{
                 setcore(false);
                 setuse(false);
@@ -138,7 +138,7 @@ const DashBoard = () => {
         </div>
         <div className=' mt-[2vh]'>
         <p className='py-8 px-32 mx-auto font-bold text-5xl mt-8 '>{title}</p>
-        {core && <Core/>}
+        {core && <Core title={title}/>}
         {use && <User/>}
         {community && <Community/>}
         {sponsor && <Sponsor/>}
