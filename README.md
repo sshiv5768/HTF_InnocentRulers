@@ -67,3 +67,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 | Logistic management | Logistic hurdles can be handle with this like swag distribution, swag requirements, t-shirt sizes |
 | Food & Venue Management | Handles Food and Venue data |
 
+## 🎆 PostMan Documentation<br/>
+
+https://www.postman.com/red-astronaut-464000/workspace/event-manager/overview
+
